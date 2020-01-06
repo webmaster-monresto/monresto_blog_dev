@@ -1,0 +1,98 @@
+<htm>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 50px auto;
+  perspective: 2000px;
+}
+.cube {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate 5s linear infinite ;
+ 
+}
+.cube div {
+  width: 196px;
+  height: 196px;
+  position: absolute;
+  opacity: 0.5;
+  margin: 0;
+  display:block;
+}
+.front {
+  background: red;
+  transform: rotateX(0deg) translateZ(97px);
+}
+.back {
+  background: blue;
+  transform: rotateX(-180deg) translateZ(97px);
+}
+.left {
+  background: url();
+  background-size: contain;
+  transform: rotateY(-90deg) translateZ(97px);
+  overflow:hidden;
+}
+.left:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('http://vignette3.wikia.nocookie.net/dumbledoresarmyroleplay/images/0/0f/GrumpyCatTransparent.png/revision/latest?cb=20130920194443') no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -30px;
+  margin-left: 20px;
+  transform: rotate(45deg);
+}
+.right {
+  background: pink;
+  transform: rotateY(90deg) translateZ(97px);
+}
+.top {
+  background: grey;
+  transform: rotateX(90deg) translateZ(97px);
+}
+.bottom {
+  background: brown;
+  transform: rotateX(-90deg) translateZ(97px);
+}
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg) rotateX(45deg) 
+  }
+  to {
+    transform: rotateY(360deg) rotateX(45deg)  
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+
+
+
+
+
+<div class="container">
+  <div class="cube">
+    <div class='front'></div>
+    <div class='back'></div>
+    <div class='left'></div>
+    <div class='right'></div>
+    <div class='top'></div>
+    <div class='bottom'></div>
+  </div>
+</div>
+
+
+</body>
